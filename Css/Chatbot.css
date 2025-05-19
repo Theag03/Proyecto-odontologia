@@ -1,0 +1,110 @@
+/* Estilo del botón flotante */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Contenedor del chatbot (inicialmente oculto) */
+.chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Mostrar el chatbot cuando está activo */
+.chatbot-container.active {
+    display: flex;
+}
+
+/* Cabecera del chatbot */
+.chatbot-header {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botón de cerrar */
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Área de mensajes */
+.chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Estilo de los mensajes */
+.message {
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+/* Mensaje del bot */
+.bot-message {
+    background: #f1f1f1;
+    align-self: flex-start;
+}
+
+/* Mensaje del usuario (puedes agregarlo luego con JS) */
+.user-message {
+    background: #4CAF50;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Área de entrada */
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chatbot-input button {
+    margin-left: 5px;
+    padding: 8px 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

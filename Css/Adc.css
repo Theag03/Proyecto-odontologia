@@ -1,0 +1,219 @@
+:root {
+            --primary-color: #198754;
+            --secondary-color: #e8f5e9;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .dental-form-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .service-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .service-option:hover {
+            border-color: var(--primary-color);
+            background-color: var(--secondary-color);
+        }
+        
+        .service-option.selected {
+            background-color: var(--secondary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .service-price {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .time-slot {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .time-slot:hover:not(.occupied) {
+            background-color: var(--secondary-color);
+        }
+        
+        .time-slot.selected {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .time-slot.occupied {
+            background-color: #f8d7da;
+            color: #721c24;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+        
+        .total-container {
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        
+        #totalAmount {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        /* Barra de navegación */
+.navbar {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+/* Botón agendar cita */
+.btn-agendar {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-agendar:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+}
+
+/* Estilos para el botón de login/registro */
+#nav_login .btn-outline-success {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+#nav_login .btn-outline-success:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#nav_login #register_text {
+    display: none;
+}
+
+/* Mostrar "Registrarse" en hover */
+#nav_login .btn-outline-success:hover #login_text {
+    display: none;
+}
+
+#nav_login .btn-outline-success:hover #register_text {
+    display: inline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #nav_login {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    #nav_login .btn-outline-success {
+        width: 100%;
+    }
+    
+    .btn-agendar {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+}
+
+.service-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service-price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.time-slot-btn {
+    min-width: 80px;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #summaryModal, #summaryModal * {
+        visibility: visible;
+    }
+    #summaryModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-footer {
+        display: none;
+    }
+}

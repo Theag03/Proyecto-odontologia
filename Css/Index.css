@@ -1,0 +1,671 @@
+:root {
+    --primary-color: #198754;
+    --secondary-color: #e8f5e9;
+    --accent-color: #17a2b8;
+    --text-color: #333;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Barra de navegación */
+.navbar {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+/* Botón agendar cita */
+.btn-agendar {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-agendar:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+}
+
+/* Carrusel */
+.main-carousel {
+    margin-top: 20px;
+}
+
+#carouselExampleDark {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.carousel-caption {
+    bottom: 30%;
+    background-color: rgba(25, 135, 84, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    left: 10%;
+    right: 10%;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary-color);
+    border-color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(25, 135, 84, 0.7);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Secciones */
+.welcome-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.welcome-section h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.welcome-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+}
+
+.welcome-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.treatments-section {
+    padding: 80px 0;
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+/* Botones */
+.btn-know-more, .btn-reserve-now {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    margin: 0 10px;
+}
+
+.btn-know-more {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-know-more:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.btn-reserve-now {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-reserve-now:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer h5 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .carousel-caption {
+        bottom: 20%;
+        padding: 20px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        bottom: 15%;
+        left: 5%;
+        right: 5%;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .welcome-section, .treatments-section {
+        padding: 60px 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-know-more, .btn-reserve-now {
+        width: 80%;
+        margin: 5px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption {
+        bottom: 10%;
+        padding: 15px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    
+    .footer .col-md-4 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+/* Sección de Compromiso de Servicios */
+.services-commitment {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.services-commitment img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.services-commitment img:hover {
+    transform: scale(1.02);
+}
+
+.services-content {
+    padding: 30px;
+}
+
+.commitment-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+/* Efecto para el texto */
+.commitment-text {
+    position: relative;
+    padding-left: 20px;
+}
+
+.commitment-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Estilos para el botón de login/registro */
+#nav_login .btn-outline-success {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+#nav_login .btn-outline-success:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#nav_login #register_text {
+    display: none;
+}
+
+/* Mostrar "Registrarse" en hover */
+#nav_login .btn-outline-success:hover #login_text {
+    display: none;
+}
+
+#nav_login .btn-outline-success:hover #register_text {
+    display: inline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-commitment {
+        padding: 60px 0;
+    }
+    
+    .services-content {
+        padding: 20px 0;
+    }
+    
+    .services-commitment img {
+        margin-bottom: 30px;
+    }
+    
+    .commitment-text::before {
+        height: 4px;
+        width: 100px;
+        top: -15px;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-commitment {
+        padding: 40px 0;
+    }
+    
+    .commitment-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Sección del mapa */
+        .map-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-info h2 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-info p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-info i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .map-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 450px;
+        }
+        
+        .map-info {
+            padding: 2rem;
+        }
+        
+        .map-info h2 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-info p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-info i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .btn-directions {
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-directions:hover {
+            background-color: #3367D6;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .map-container {
+                height: 350px;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Paleta de verdes profesionales para odontología */
+    :root {
+        --green-primary: #2ecc71;  /* Verde vibrante pero profesional */
+        --green-dark: #27ae60;     /* Verde más oscuro para hover */
+        --green-light: #d5f5e3;    /* Verde claro para efectos */
+        --green-border: #58d68d;   /* Verde para bordes */
+    }
+    
+    /* Estilos base de los botones */
+    .cta-buttons .btn {
+        position: relative;
+        padding: 0.8rem 2.5rem;
+        font-weight: 600;
+        border-radius: 50px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+        min-width: 180px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    /* Botón CONOCE MÁS - Estilo outline */
+    .btn-know-more {
+        background-color: transparent;
+        color: var(--green-primary);
+        border: 2px solid var(--green-primary);
+        z-index: 1;
+    }
+    
+    /* Botón RESERVA AHORA - Estilo sólido */
+    .btn-reserve-now {
+        background-color: var(--green-primary);
+        color: white;
+        box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+        z-index: 1;
+    }
+    
+    /* Estructura interna de los botones */
+    .btn-text {
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    
+    .btn-icon {
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateX(-10px);
+        margin-left: 8px;
+        display: inline-block;
+        font-size: 0.9em;
+    }
+    
+    /* ===== ANIMACIÓN PARA EL BOTÓN "CONOCE MÁS" ===== */
+    .pulse-on-hover:hover {
+        animation: pulse-green 1.5s infinite;
+        background-color: var(--green-primary);
+        color: white;
+    }
+    
+    .pulse-on-hover:hover .btn-icon {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .pulse-on-hover:hover .btn-text {
+        transform: translateX(-5px);
+    }
+    
+    @keyframes pulse-green {
+        0% {
+            box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.5);
+        }
+        70% {
+            box-shadow: 0 0 0 12px rgba(46, 204, 113, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+        }
+    }
+    
+    /* ===== ANIMACIÓN PARA EL BOTÓN "RESERVA AHORA" ===== */
+    .float-on-hover {
+        transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    
+    .float-on-hover:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 24px rgba(46, 204, 113, 0.3);
+        background-color: var(--green-dark);
+    }
+    
+    .float-on-hover:hover .btn-icon {
+        opacity: 1;
+        transform: translateX(0);
+        animation: bounce 0.6s infinite alternate;
+    }
+    
+    .float-on-hover:hover .btn-text {
+        transform: translateX(-5px);
+    }
+    
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-4px);
+        }
+    }
+    
+    /* ===== EFECTO DE ONDA AL HACER CLIC ===== */
+    .btn:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+    
+    .btn:focus:not(:active)::after {
+        animation: ripple 0.8s ease-out;
+    }
+    
+    @keyframes ripple {
+        0% {
+            transform: scale(0, 0);
+            opacity: 0.5;
+        }
+        100% {
+            transform: scale(20, 20);
+            opacity: 0;
+        }
+    }
+    
+    /* ===== EFECTO DE DEGRADADO AL HACER HOVER ===== */
+    .btn-reserve-now::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, var(--green-primary), var(--green-dark));
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+    .btn-reserve-now:hover::before {
+        opacity: 1;
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cta-buttons .btn {
+            width: 100%;
+            max-width: 280px;
+            margin: 8px 0;
+        }
+    }
